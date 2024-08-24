@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const events = [
-        { date: "2024-08-26", type: "practice", title: "Outdoor Practice" },
+        
         { date: "2024-08-29", type: "practice", title: "Outdoor Practice" },
         { date: "2024-09-02", type: "practice", title: "Outdoor Practice" },
         { date: "2024-09-08", type: "fundraiser", title: "Exec Browns Fundraiser" },
