@@ -1,0 +1,841 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #333;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #1abc9c;
+}
+
+/* Header Styles */
+header {
+    background: #283e51;
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    flex-wrap: wrap;
+}
+
+.header-content h1 {
+    font-size: 2.5em;
+    margin: 0;
+    font-weight: 700;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s ease, color 0.3s ease;
+    font-weight: 500;
+}
+
+nav ul li a:hover {
+    background: #1abc9c;
+    color: white;
+}
+
+.header-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.icon-link {
+    font-size: 1.5em;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.icon-link:hover {
+    color: #1abc9c;
+}
+
+/* Hero Section */
+#hero {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 0;
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+#hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+    padding: 20px;
+    background: rgba(179, 179, 179, 0.5);
+    border-radius: 10px;
+    animation: fadeIn 2s ease;
+}
+
+.hero-content h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+.hero-btn {
+    background: #99f2c8;
+    color: #283e51;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    transition: background 0.3s ease, color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hero-btn:hover {
+    background: #283e51;
+    color: #99f2c8;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Section Styling */
+section {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+section h1,
+h2 {
+    text-align: center;
+    color: #283e51;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+}
+
+/* Cards and Gallery */
+.itinerary-container,
+.officer-container,
+.photo-gallery,
+.tournament-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.itinerary,
+.officer,
+.photo-card,
+.tournament-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 1 1 calc(25% - 40px);
+    max-width: calc(25% - 40px);
+    margin-bottom: 20px;
+}
+
+.itinerary:hover,
+.officer:hover,
+.photo-card:hover,
+.tournament-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.itinerary img,
+.officer img,
+.photo-card img,
+.tournament-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.itinerary h3,
+.officer h3,
+.tournament-info h3 {
+    padding: 20px;
+    text-align: center;
+    color: #283e51;
+    font-size: 1.8em;
+    margin: 0;
+    background: #f7f7f7;
+    transition: background 0.3s ease;
+}
+
+.itinerary a,
+.officer a,
+.tournament-info a {
+    text-decoration: none;
+}
+
+.itinerary a:hover h3,
+.officer a:hover h3,
+.tournament-info a:hover h3 {
+    background: #1abc9c;
+    color: white;
+}
+
+tournament-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.tournament-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 800px;
+    /* Sets the width of each tournament card */
+    width: 100%;
+    /* Ensures it takes full width on smaller screens */
+    margin-bottom: 20px;
+}
+
+.tournament-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.tournament-card img {
+    width: 100%;
+    height: 400px;
+    /* Increased height for larger images */
+    object-fit: cover;
+    border-bottom: 4px solid #1abc9c;
+}
+
+.tournament-info {
+    padding: 20px;
+    /* Added padding to the text inside the card */
+    text-align: center;
+}
+
+.tournament-info h3 {
+    margin-top: 0;
+    font-size: 2em;
+    /* Increased font size for titles */
+    color: #283e51;
+}
+
+.tournament-info p {
+    font-size: 1.1em;
+    /* Slightly larger font size for better readability */
+    color: #7d8790;
+}
+
+/* Bio Content */
+.bio-content {
+    text-align: center;
+    background: white;
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: auto;
+}
+
+.bio-content img {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    margin-top: 20px;
+    border: 5px solid #283e51;
+}
+
+.bio-content h2 {
+    color: #283e51;
+    font-size: 2.2em;
+    margin-top: 20px;
+}
+
+/* Calendar Styles */
+.calendar {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.calendar-header h2 {
+    font-size: 1.8em;
+    color: #2c3e50;
+}
+
+.calendar-header button {
+    background: none;
+    border: none;
+    color: #2c3e50;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.calendar-header button:hover {
+    color: #1abc9c;
+}
+
+.calendar-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.calendar-table th,
+.calendar-table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+    width: 14.285%;
+    position: relative;
+}
+
+.calendar-table th {
+    background-color: #2c3e50;
+    color: white;
+    font-size: 1.2em;
+}
+
+.calendar-table td.event {
+    background-color: #f2f2f2;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.calendar-table td.event:hover {
+    background-color: #ecf0f1;
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    color: #333;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    white-space: nowrap;
+    font-size: 0.9em;
+}
+
+.calendar-table td.event:hover .tooltip {
+    display: block;
+}
+
+/* Practice Schedule Styles */
+#practice-schedule {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.schedule-container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.schedule-container h1,
+.schedule-container h2 {
+    color: #283e51;
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.schedule-table th,
+.schedule-table td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.schedule-table th {
+    background-color: #283e51;
+    color: white;
+    font-size: 1.2em;
+}
+
+.schedule-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.schedule-note {
+    background: #eaf2f8;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 5px;
+    color: #333;
+    font-size: 1.1em;
+}
+
+/* Exec Team Section */
+#exec-team {
+    padding: 40px 20px;
+    background-color: white;
+}
+
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.team-member {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.team-member img {
+    max-width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-bottom: 4px solid #ff6b81;
+}
+
+.member-info {
+    padding: 20px;
+}
+
+.member-info h3 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #4b6584;
+}
+
+.member-info h4 {
+    margin-top: 5px;
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #4b6584;
+}
+
+.member-info p {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #7d8790;
+}
+
+/* Footer */
+footer {
+    background-color: #283e51;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+footer p a {
+    color: #99f2c8;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer p a:hover {
+    color: #f7f7f7;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Hero Image Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Slideshow Container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.mySlides {
+    display: none;
+}
+
+.fade {
+    animation-name: fadeIn;
+    animation-duration: 1.5s;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+    }
+
+    .team-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Contact Page Styles */
+#contact-hero {
+    background-color: #1abc9c;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#contact-hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+#contact-hero p {
+    font-size: 1.2em;
+}
+
+#contact-info {
+    padding: 60px 20px;
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.contact-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+    max-width: 200px;
+    flex: 1 1 1 200px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.contact-card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.contact-card i {
+    color: #1abc9c;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+.contact-card i:hover {
+    color: #17a085;
+}
+
+.contact-card h3 {
+    font-size: 1.8em;
+    color: #283e51;
+}
+
+.contact-card p {
+    font-size: 1em;
+    color: #7d8790;
+    margin-bottom: 20px;
+}
+
+.contact-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1abc9c;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-btn:hover {
+    background-color: #17a085;
+    text-decoration: none;
+}
+
+/* Modal Styles for Event Details */
+
+
+/* Modal Styles for Image Gallery */
+/* Modal Styles for Event Details */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: white;
+    color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #555;
+}
+
+/* Ensure images in the gallery are clickable */
+.photo-card img {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.photo-card img:hover {
+    transform: scale(1.05);
+}
+
+/* Calendar Styles */
+#calendar-section {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+#calendar-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #283e51;
+}
+
+#calendar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.month {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.month h3 {
+    margin-top: 0;
+    color: #283e51;
+    font-size: 1.8em;
+    text-align: center;
+}
+
+.month-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.month-table th,
+.month-table td {
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.month-table th {
+    background-color: #283e51;
+    color: white;
+}
+
+.month-table td {
+    background-color: #f7f7f7;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.month-table td:hover {
+    background-color: #eaf2f8;
+}
+
+.event.practice {
+    background-color: #1abc9c;
+    color: white;
+}
+
+.event.clinic {
+    background-color: #3498db;
+    color: white;
+}
+
+.event.tournament {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.event.fundraiser {
+    background-color: #f39c12;
+    color: white;
+}
+
+/* Color Key Styles */
+#color-key {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+#color-key h3 {
+    font-size: 1.5em;
+    color: #283e51;
+    margin-bottom: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+.key-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1em;
+}
+
+.key-color {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+}
+
+.practice {
+    background-color: #1abc9c;
+}
+
+.clinic {
+    background-color: #3498db;
+}
+
+.tournament {
+    background-color: #e74c3c;
+}
+
+.fundraiser {
+    background-color: #f39c12;
+}
