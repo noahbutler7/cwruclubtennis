@@ -839,3 +839,91 @@ html {
 .fundraiser {
     background-color: #f39c12;
 }
+
+@media (max-width: 1024px) {
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .header-links {
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    #calendar {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .month {
+        margin-bottom: 20px;
+    }
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+    h1, h2 {
+        font-size: 2em;
+    }
+
+    .header-content h1 {
+        font-size: 2em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .header-links {
+        margin-top: 10px;
+    }
+
+    #calendar {
+        grid-template-columns: 1fr;
+    }
+
+    .month {
+        width: 100%;
+    }
+
+    .modal-content {
+        width: 90%;
+        max-width: 500px;
+    }
+}
+
+/* For very small screens (phones in portrait mode) */
+@media (max-width: 480px) {
+    h1, h2 {
+        font-size: 1.8em;
+    }
+
+    .header-content h1 {
+        font-size: 1.8em;
+    }
+
+    .modal-content {
+        width: 90%;
+        max-width: 400px;
+    }
+
+    .photo-card img, 
+    .team-member img, 
+    .tournament-card img {
+        height: auto;
+    }
+
+    nav ul {
+        padding: 0;
+    }
+
+    nav ul li a {
+        padding: 8px 10px;
+    }
+}
